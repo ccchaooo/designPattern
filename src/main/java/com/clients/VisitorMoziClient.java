@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
  * @date 2018/11/30 15:14
  */
 @Service
-public class VisiterMoziClient implements Client {
+public class VisitorMoziClient implements Client {
     @Autowired
     DynamicDispatch dynamicDispatch;
     @Autowired

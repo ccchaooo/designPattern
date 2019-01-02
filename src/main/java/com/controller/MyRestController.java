@@ -199,12 +199,14 @@ public class MyRestController{
         commandClient.clientInterface();
     }
 
+
     @Autowired
     MediatorClient mediatorClient;
     @RequestMapping(value = "/mediator",method = RequestMethod.GET)
     public void chain() {
         mediatorClient.clientInterface();
     }
+
 
     @Autowired
     FlyweigthClient flyweigthClient;
@@ -213,10 +215,25 @@ public class MyRestController{
         flyweigthClient.clientInterface();
     }
 
+
     @Autowired
-    VisiterMoziClient visiterMoziClient;
+    VisitorMoziClient visitorMoziClient;
     @RequestMapping(value = "/visiterMozi",method = RequestMethod.GET)
-    public void visiterMozi() {
-        visiterMoziClient.clientInterface();
+    public void visitorMozi() {
+        visitorMoziClient.clientInterface();
+    }
+
+    @Autowired
+    VisitorMultidispatchClient visitorMultidispatchClient;
+    @RequestMapping(value = "/visitorMultidispatch",method = RequestMethod.GET)
+    public void visitorMultidispatch() {
+        visitorMultidispatchClient.clientInterface();
+    }
+
+    @Autowired
+    VisitorClient visitorClient;
+    @RequestMapping(value = "/visitor",method = RequestMethod.GET)
+    public void visitor() {
+        visitorClient.clientInterface();
     }
 }
